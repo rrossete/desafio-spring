@@ -51,7 +51,7 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -68,21 +68,13 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
 
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 
+	
 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
 		</dependency>
-
-		
-
 
 	</dependencies>
 
@@ -98,10 +90,10 @@
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-maven-plugin</artifactId>
 				<configuration>
-					<driver>org.postgresql.Driver</driver>
-					<url>jdbc:postgresql://localhost:5432/cp_database</url>
-					<user>postgres</user>
-					<password>admin</password>
+					<driver>org.h2.Driver</driver>
+					<url>jdbc:h2:mem:cp_database</url>
+					<user>sa</user>
+					<password></password>
 					<baselineOnMigrate>true</baselineOnMigrate>
 					<schemas>public</schemas>
 					<locations>
@@ -111,7 +103,6 @@
 					</locations>
 				</configuration>
 			</plugin>
-
 
 		</plugins>
 	</build>

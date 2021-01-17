@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS CP_Cidade(
-	id SERIAL PRIMARY KEY ,
+	id IDENTITY(1,1) PRIMARY KEY ,
 	nome varchar(200) not null,
 	estado varchar(200) not null
 );
@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS CP_Cidade(
 
 
 CREATE TABLE IF NOT EXISTS CP_Cliente(
-	id SERIAL PRIMARY KEY ,
+	id IDENTITY(1,1) PRIMARY KEY ,
 	nome varchar(200) not null,
 	sexo varchar(50) null,
 	data_nascimento date null,

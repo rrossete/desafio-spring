@@ -94,6 +94,9 @@ public class ClienteService {
 		if (Objects.isNull(dto.getCidade())) {
 			throw new BusinessException("O ID da cidade é obrigatório.");
 		}
+		if (Objects.isNull(dto.getNome())) {
+			throw new BusinessException("O nome do cliente é obrigatório.");
+		}
 
 	}
 
